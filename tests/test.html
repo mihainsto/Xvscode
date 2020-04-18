@@ -1,0 +1,52 @@
+!<!DOCTYPE html>
+<div className="header">
+    <div className="logo">
+      <img src="ub-logo-en-white.png" alt="logo" />
+    </div>
+    <div className="actionBar">
+      <li className="userDetails">
+        Welcome,
+        <span style={{ textTransform: "uppercase", fontWeight: "bolder" }}>
+          {" "}
+          {this.props.userName}
+        </span>
+      </li>
+      <li>Tickets</li>
+      <li>
+        <button className="homeButton">Create Ticket</button>
+      </li>
+    </div>
+    <div className="toggleMenuButton" style={{ display: "none" }}>
+      <img
+        src="sidemenu.svg"
+        alt="sideMenu"
+        style={{ height: 25 }}
+        onClick={this.renderClickMenu}
+      />
+    </div>
+    <div
+      id="sideBar"
+      style={{
+        display: this.state.toggleSidebar ? "block" : "none"
+      }}
+    >
+      <li
+        style={{ fontSize: 16, borderBottom: "1px solid #808080" }}
+        onClick={this.renderClickMenu}
+      >
+        Back
+      </li>
+      <li>
+        <img src="profile.svg" className="sideBarPic" alt="profile" />
+        Profile
+      </li>
+      <li>
+        <img src="ticket.svg" className="sideBarPic" alt="tickets" />
+        Tickets
+      </li>
+      <li>
+        <img src="logout.svg" className="sideBarPic" alt="logout" />
+        Logout
+      </li>
+    </div>
+  </div>
